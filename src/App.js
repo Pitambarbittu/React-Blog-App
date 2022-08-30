@@ -10,6 +10,7 @@ import Food from "./Pages/Food"
 import SingleBlogPage from "./Pages/SingleBlogPage";
 import './Style.css'
 import Details from "./Pages/Details";
+import Notfound from "./Pages/Notfound";
 
 function App() {
   return (
@@ -26,10 +27,15 @@ function App() {
         <Route path="/fitness" element = {<Fitness />} />
         <Route path="/food" element = {<Food />} />
         <Route path=":category/:articleid" element = {<SingleBlogPage/>}/>
+     <Route path="*" element={<Notfound/>} />
+
+       
+       
+     
       </Routes>
       </BrowserRouter>
       </Details>
-
+      
 
     </div>
   );
